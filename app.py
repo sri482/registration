@@ -25,8 +25,8 @@ def submit_form():
     resume.save(resume_path)
 
     # Insert data into MySQL
-    query = "INSERT INTO candidates (name, email, phone, resume_path) VALUES (%s, %s, %s, %s, %s)"
-    values = (name, email, phone, resume_path)
+    query = "INSERT INTO candidates (name, email, phone) VALUES (%s, %s, %s)"
+    values = (name, email, phone)
     cursor.execute(query, values)
     db.commit()
 
