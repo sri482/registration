@@ -19,16 +19,14 @@ def submit_form():
     name = request.form['name']
     email = request.form['email']
     phone = request.form['phone']
-    dob = request.form['dob']
-    resume = request.files['resume']  # Assuming you want to handle file uploads
-
+    
     # Save the resume file (optional)
     resume_path = f'uploads/{resume.filename}'
     resume.save(resume_path)
 
     # Insert data into MySQL
-    query = "INSERT INTO candidates (name, email, phone, dob, resume_path) VALUES (%s, %s, %s, %s, %s)"
-    values = (name, email, phone, dob, resume_path)
+    query = "INSERT INTO candidates (name, email, phone, resume_path) VALUES (%s, %s, %s, %s, %s)"
+    values = (name, email, phone, resume_path)
     cursor.execute(query, values)
     db.commit()
 
