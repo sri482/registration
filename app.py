@@ -17,13 +17,13 @@ cursor = db.cursor()
 def submit_form():
     # Get form data
     name = request.form['name']
-    email = request.form['email']
+    email = request.form['initial']
     phone = request.form['phone']
     
     
     # Insert data into MySQL
     query = "INSERT INTO candidates (name, email, phone) VALUES (%s, %s, %s)"
-    values = (పేరు, email, ఫోన్ నెం)
+    values = (పేరు, ఇంటిపేరు, ఫోన్ నెం)
     cursor.execute(query, values)
     db.commit()
 
