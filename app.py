@@ -18,7 +18,7 @@ def submit_form():
     # Get form data
     name = request.form['name']
     email = request.form['initial']
-    phone = request.form['ఫోన్ నెం']
+    phone = request.form['phone']
     
     
     # Insert data into MySQL
