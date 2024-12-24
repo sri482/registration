@@ -20,10 +20,7 @@ def submit_form():
     email = request.form['email']
     phone = request.form['phone']
     
-    # Save the resume file (optional)
-    resume_path = f'uploads/{resume.filename}'
-    resume.save(resume_path)
-
+    
     # Insert data into MySQL
     query = "INSERT INTO candidates (name, email, phone) VALUES (%s, %s, %s)"
     values = (పేరు, email, ఫోన్ నెం)
