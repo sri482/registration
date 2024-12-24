@@ -23,7 +23,7 @@ def submit_form():
     
     # Insert data into MySQL
     query = "INSERT INTO candidates (name, email, phone) VALUES (%s, %s, %s)"
-    values = (name, initial, phone n)
+    values = (name, initial, phone)
     cursor.execute(query, values)
     db.commit()
 
