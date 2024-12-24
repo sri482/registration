@@ -17,7 +17,7 @@ cursor = db.cursor()
 def submit_form():
     # Get form data
     name = request.form['name']
-    email = request.form['initial']
+    initial = request.form['initial']
     phone = request.form['phone']
     
     
