@@ -26,7 +26,7 @@ def submit_form():
     values = (name, initial, phone)
     cursor.execute(query, values)
     db.commit()
-
+print(f"name: {name}, initial: {initial}, phone: {phone}")
     return jsonify({"message": "Form submitted successfully!"})
 
 if __name__ == "__main__":
