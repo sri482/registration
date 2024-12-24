@@ -16,7 +16,7 @@ cursor = db.cursor()
 @app.route('/submit', methods=['POST'])
 def submit_form():
     # Get form data
-    name = request.form['name']
+    name = request.form['పేరు']
     email = request.form['email']
     phone = request.form['phone']
     
